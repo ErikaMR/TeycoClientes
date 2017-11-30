@@ -1,0 +1,46 @@
+<center>
+  <p></p>
+  <div class="container" style="padding: 170px; background:#29b6f6">
+  <div class="z-depth-1 white lighten-4 row" style="display: inline-block; padding: 32px 55px 0px 55px; border: 2px solid #EEE;">
+    <h2 class="ui header" style="color:#424242">Introduce los siguientes datos para crear una cuenta</h2>
+ <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6"> 
+          {{input value=nombre id="first_name" type="text" class="validate"}}
+          <label for="first_name"><h3>Nombre:</h3></label>
+        </div>
+        <div class="input-field col s6">
+          {{input id="last_name" value=apellido type="text" class="validate"}}
+          <label for="last_name"><h3>Apellido:</h3></label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          {{input id="email" value=email type="email" class="validate"}}
+          <label for="email"><h3>Correo electrónico:</h3></label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          {{input id="password" value=contrasena type="password" class="validate"}}
+          <label for="password"><h3>Contraseña:</h3></label>
+        </div>
+        <div class="input-field col s12">
+          {{input id="usuario_id" value=idusuario type="text" class="validate"}}
+          <label for="usuario_id"><h3>id (unicamente el que nosotros te proporcionamos):</h3></label>
+        </div>
+      </div>
+      <a {{action 'registro'}} class="waves-effect waves-light btn"><b>Crear Cuenta</b></a>
+      <button class="btn btn-primary" type="reset"> <b>Limpiar Formulario</b></button>
+
+      <br>
+      <br>
+      <br>
+      {{#Link-to 'login' }}Volver al inicio de sesión {{/Link-to}}
+    </form>
+  </div>
+</div>
+</div>
+</center>
+{{outlet}}

@@ -30,6 +30,17 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.firebase = {
+      apiKey: "AIzaSyAxfEtBGau4u1nX7pGRiY_-YeoMWaGoruI",
+      authDomain: "teyco-87172.firebaseapp.com",
+      databaseURL: "https://teyco-87172.firebaseio.com",
+      projectId: "teyco-87172",
+      storageBucket: "teyco-87172.appspot.com",
+      messagingSenderId: "884248412388"
+    };
+    ENV.torii = {
+      sessionServiceName:'session'
+    };
   }
 
   if (environment === 'test') {
@@ -44,6 +55,17 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    ENV.firebase = {
+      apiKey: "AIzaSyAxfEtBGau4u1nX7pGRiY_-YeoMWaGoruI",
+      authDomain: "teyco-87172.firebaseapp.com",
+      databaseURL: "https://teyco-87172.firebaseio.com",
+      projectId: "teyco-87172",
+      storageBucket: "teyco-87172.appspot.com",
+      messagingSenderId: "884248412388"
+    };
+    ENV.torii = {
+      sessionServiceName:'session'
+    };
 
   }
 

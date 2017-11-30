@@ -1,0 +1,61 @@
+<center>
+<div class="row">
+  <p></p>
+  <div class="container" style="padding: 170px; background:#29b6f6">
+  <div class="z-depth-1 white lighten-4 row" style="display: inline-block; padding: 32px 55px 0px 55px; border: 2px solid #EEE;">
+    <form class="col s12">
+      <div class="row">
+         <h2 class="ui header" style="color:#424242">Introduce los siguientes datos para dar de alta un sistema de videovigilancia</h2>
+        <div class="input-field col s12">
+            <div class='input-field col s12'>
+                {{input class='validate' value=model.ncliente type='text' name='cliente'}}
+                <label for='email'><h3><i class="user circle"></i>Nombre del cliente:</h3></label>
+            </div>
+            <div class='input-field col s12'>
+                {{input class='validate' value=model.ubicacion type='text' name='ubicacion'}}
+                <label for='email'><h3><i class="user circle outline"></i>Ubicación/Referencia:</h3></label>
+            </div>
+            <div class='input-field col s12'>
+                {{input class='validate' value=model.mac type='text' name='mac'}}
+                <label for='email'><h3><i class="user circle outline"></i>Número de MAC:</h3></label>
+            </div>
+            <div class='input-field col s12'>
+                {{input class='validate' value=model.nusuario type='text' name='usuario'}}
+                <label for='email'><h3><i class="user circle outline"></i>Nombre de usuario:</h3></label>
+            </div>
+            <div class='input-field col s12'>
+                {{input class='validate' value=model.cdvr type='text' name='con'}}
+                <label for='email'><h3><i class="user circle outline"></i>Contraseña (opcional):</h3></label>
+            </div>
+            
+            <a {{action 'guardarsv'}} class="waves-effect waves-light btn" align="center">Guardar</a>
+            <button class="btn btn-primary" type="reset"> <b>Limpiar Formulario</b></button>
+            <br>
+            <br>
+            {{#Link-to 'lista-sistemas'}} Regresar a Sistemas {{/Link-to}}
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+</center>
+<div class="ui secondary pointing menu">
+  <a class="active item">
+    Home
+  </a>
+  <a class="item">
+    Messages
+  </a>
+  <a class="item">
+    Friends
+  </a>
+  <div class="right menu">
+    <a class="ui item">
+      Logout
+    </a>
+  </div>
+</div>
+<div class="ui segment">
+  <p></p>
+</div>
