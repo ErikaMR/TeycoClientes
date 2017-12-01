@@ -1,0 +1,42 @@
+<center>
+  <p></p>
+  <div class="container" style="padding: 170px; background:#29b6f6">
+  <div class="z-depth-1 white lighten-4 row" style="display: inline-block; padding: 32px 55px 0px 55px; border: 2px solid #EEE;">
+  	<div class="row">
+  	<h2 class="ui header" style="color:#424242">Introduce los siguientes datos para agendar una vista; Nos pondremos en contacto lo mas pronto posible.</h2>
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          {{input value=model.motivo id="motivo" type="text" class="validate"}}
+          <label for="motivo"><h3>Motivo de la cita:</h3></label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          {{input id="lugar" value=model.lugar type="text" class="validate"}}
+          <label for="lugar"><h3>Introduce la ubicación del sistema de videovigilancia: </h3></label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          {{input id="contacto" value=model.contacto type="text" class="validate"}}
+          <label for="contacto"><h3>Introduce tu número telefónico de contacto: </h3> </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+        	<h3 align="left"style="color:#9e9e9e">Introduce la fecha en la que deseas que te visitemos (Se confirmará posteriormente): </h3>
+            {{input type='date' value=model.fecha}}
+        </div>
+      </div>
+      <a {{action 'agendar'}} class="waves-effect waves-light btn" align="center"><b>Agendar</b></a>
+      <button class="btn btn-primary" type="reset"> <b>Limpiar Formulario</b></button>
+      <br>
+      <br>
+      {{#Link-to 'inicio'}}Regresar al Inicio {{/Link-to}}
+    </form>
+</div>
+</div>
+</div>
+</center>
+{{outlet}}

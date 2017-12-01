@@ -1,12 +1,8 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-	motivo: DS.attr('string'),
-	fecha: DS.attr('string'),
-	lugar: DS.attr('string'),
-	contacto: DS.attr('string'),
+	preg: DS.attr('string'),
 
-	usuario: DS.belongsTo('usuario'),
-	sistema: DS.belongsTo('sistema')
-
+	respuestas: DS.hasMany('respuesta'),
+	usuario: DS.belongsTo('usuario')
 });

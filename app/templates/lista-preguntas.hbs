@@ -1,0 +1,27 @@
+<center>
+  <p></p>
+  <div class="container" style="padding: 170px; background:#29b6f6">
+  <div class="z-depth-1 white lighten-4 row" style="display: inline-block; padding: 32px 55px 0px 55px; border: 2px solid #EEE;">
+  	  <div class="row">
+  		<h2 class="ui header" style="color:#424242">A continuacion ponemos a su servicio soluciones a preguntas que han realizado clientes en relación a sistemas de videovigilancia. Así mismo, ponemos a su servicio la opción de crear pregunta con la finalidad de también poder resolver sus dudas. </h2>
+  		<br>
+	    <br>
+  		<ul class="collection with-header">
+  			{{#each model as |pregunta|}}
+	        <li class="collection-header" style="background:#efebe9"><h4><b>{{pregunta.preg}}</b></h4>
+	        	<li>Respuesta:
+	        	<p></p>
+	        	<button><b>{{#Link-to 'respuestas'}}Añadir respuesta{{/Link-to}}</b></button>
+	        	</li>
+	        </li>
+	        {{/each}}
+      </ul>
+
+		{{#Link-to 'preguntas' class="waves-effect waves-light btn" align="center"}}Crear pregunta{{/Link-to}}
+		<br>
+      	<br>
+      	{{#Link-to 'inicio'}} Regresar al inicio{{/Link-to}}
+	  </div>
+</div>
+</div>
+</center>

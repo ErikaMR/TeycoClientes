@@ -9,7 +9,6 @@ export default DS.Model.extend({
 	perfil: DS.attr('boolean'),
 
 	preguntas: DS.hasMany('pregunta'),
-	respuestas: DS.hasMany('respuesta'),
 	sistemas: DS.hasMany('sistema'),
 	citums: DS.hasMany('cita')
 });

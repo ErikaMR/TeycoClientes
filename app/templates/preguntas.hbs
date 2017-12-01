@@ -1,0 +1,25 @@
+<center>
+<div class="row">
+  <p></p>
+  <div class="container" style="padding: 170px; background:#29b6f6">
+  <div class="z-depth-1 white lighten-4 row" style="display: inline-block; padding: 32px 55px 0px 55px; border: 2px solid #EEE;">
+    <form class="col s12">
+      <div class="row">
+         <h2 class="ui header" style="color:#424242">Escribe la pregunta:</h2>
+        <div class="input-field col s12">
+            <div class='input-field col s12'>
+                {{input class='validate' value=model.preg type='text' name='preg'}}
+                <label for='preg'><h3><i class="user circle"></i>Pregunta ¿?:</h3></label>
+            </div>
+            <a {{action 'guardarPreg'}} class="waves-effect waves-light btn" align="center">Publicar Pregunta</a>
+            <button class="btn btn-primary" type="reset"> <b>Limpiar Formulario</b></button>
+            <br>
+            <br>
+            {{#Link-to 'lista-preguntas'}}Regresar a Preguntas Frecuentes{{/Link-to}}
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+</center>

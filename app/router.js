@@ -14,6 +14,12 @@ Router.map(function() {
   this.route('iniciocliente');
   this.route('dsistema');
   this.route('lista-sistemas');
+  this.route('preguntas');
+  this.route('lista-preguntas');
+  this.route('respuestas');
+  this.route('gcita');
+  this.route('lista-citas');
+  this.route('lista-preguntasadm');
 });
 
 export default Router;
