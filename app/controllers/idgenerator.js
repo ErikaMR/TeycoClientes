@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import sweetAlert from 'ember-sweetalert';
 
 export default Ember.Controller.extend({
 	store: Ember.inject.service(),
@@ -11,7 +12,7 @@ export default Ember.Controller.extend({
 					pid: idnuevo,
 					nombre: nombreclient,
 					}).save();
-				alert('El registro se realizó correctamente')
+				swal('El registro se realizó correctamente')
 		}
 	}
 });

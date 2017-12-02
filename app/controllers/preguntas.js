@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import sweetAlert from 'ember-sweetalert';
 
 export default Ember.Controller.extend({
 	firebase: Ember.inject.service('firebaseApp'),
@@ -8,7 +9,7 @@ export default Ember.Controller.extend({
 			let preg = this.get('store').createRecord('pregunta', {
 				preg: this.get('model.preg'),
 			}).save();
-			alert('Los datos se guardaron correctamente')
+			swal("La pregunta se publicó correctamente; Será eliminada en caso de ser inapropiada")
 		}
 	}
 });

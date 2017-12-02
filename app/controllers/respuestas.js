@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import sweetAlert from 'ember-sweetalert';
 
 export default Ember.Controller.extend({
 	firebase: Ember.inject.service('firebaseApp'),
@@ -9,7 +10,7 @@ export default Ember.Controller.extend({
 				body: this.get('model.body'),
 				pregunta: this.get('pregunta.body')
 			}).save();
-			alert('Los datos se guardaron correctamente')
+			swal('La respuesta se publicó correctamente; Si no es una respuesta que aporte valor, esta será eliminada.')
 		}
 	}
 });

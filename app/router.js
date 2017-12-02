@@ -20,6 +20,7 @@ Router.map(function() {
   this.route('gcita');
   this.route('lista-citas');
   this.route('lista-preguntasadm');
+  this.route('lista-citacliente');
 });
 
 export default Router;

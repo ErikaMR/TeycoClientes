@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import sweetAlert from 'ember-sweetalert';
 
 export default Ember.Route.extend({
 	model(){
@@ -41,7 +42,7 @@ export default Ember.Route.extend({
 	},
 	actions: {
 		borrarCita(cita){
-			alert("Se eliminó la cita");
+			swal("Se eliminó la cita");
 			cita.destroyRecord();
 		}
 	}

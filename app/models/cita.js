@@ -5,7 +5,8 @@ export default DS.Model.extend({
 	fecha: DS.attr('string'),
 	lugar: DS.attr('string'),
 	contacto: DS.attr('string'),
-
+	ncliente: DS.attr('string'),
+	uid: DS.attr('string'),
 	usuario: DS.belongsTo('usuario'),
 	sistema: DS.belongsTo('sistema')
 });

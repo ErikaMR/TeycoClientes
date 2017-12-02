@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import sweetAlert from 'ember-sweetalert';
 
 export default Ember.Controller.extend({
 	firebase: Ember.inject.service('firebaseApp'),
@@ -12,7 +13,7 @@ export default Ember.Controller.extend({
 				nusuario: this.get('model.nusuario'),
 				contra: this.get('model.contra'),
 			}).save();
-			alert('Los datos se guardaron correctamente')
+			swal('Los datos se guardaron correctamente')
 		}
 	}
 });

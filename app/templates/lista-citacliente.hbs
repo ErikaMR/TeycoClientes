@@ -1,0 +1,29 @@
+<center>
+  <p></p>
+  <div class="container" style="padding: 170px; background:#29b6f6">
+  <div class="z-depth-1 white lighten-4 row" style="display: inline-block; padding: 32px 55px 0px 55px; border: 2px solid #EEE;">
+  	  <div class="row">
+  		<h2 class="ui header" style="color:#424242">A continuación se muestra la lista de su petición de citas.</h2>
+  		<br>
+	    <br>
+  		<ul class="collection with-header">
+  			{{#each model as |cita|}}
+	        <li class="collection-item"><b>Motivo de la cita: </b> {{cita.motivo}}</li>
+	        <li class="collection-item"><b>Ubicación del Sistema de Videovigilancia: </b> {{cita.lugar}}</li>
+	        <li class="collection-item"><b>Número telefónico de contacto del cliente: </b>{{cita.contacto}}</li>
+	        <li class="collection-item"><b>Fecha posible para cita: </b>{{cita.fecha}}
+	        <br>
+	        <br>
+	        <button {{action 'borrarCita' cita}}> <b> Cancelar Cita </b></button>
+	        </li>
+	        {{/each}}
+      </ul>
+
+		{{#Link-to 'gcita' class="waves-effect waves-light btn" align="center"}}Generar Cita{{/Link-to}}
+		<br>
+      	<br>
+      	{{#Link-to 'iniciocliente'}} Regresar al Inicio{{/Link-to}}
+	  </div>
+</div>
+</div>
+</center>

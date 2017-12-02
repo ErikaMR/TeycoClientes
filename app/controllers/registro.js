@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import sweetAlert from 'ember-sweetalert';
 
 export default Ember.Controller.extend({
 	firebase: Ember.inject.service('firebaseApp'),
@@ -34,7 +35,7 @@ export default Ember.Controller.extend({
 					console.log(error)
 				})
 				
-				} else alert("¡Algo no salió bien, aún NO estas registrado!!!")
+				} else swal("¡Algo NO salió bien, aún no estas registrado!")
 			})
 		}
 	}
