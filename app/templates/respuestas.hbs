@@ -7,15 +7,16 @@
       <div class="row">
          <h2 class="ui header" style="color:#424242">Para que esta información sea de utilidad, le agradecemos que su respuesta sea puntual y concreta:</h2>
         <div class="input-field col s12">
+
             <div class='input-field col s12'>
-                {{input class='validate' value=model.body type='text' name='resp'}}
+                {{input class='validate' value=respuesta.body type='text' name='resp'}}
                 <label for='resp'><h3><i class="user circle"></i>Responder:</h3></label>
             </div>
-            <a {{action 'guardarRes'}} class="waves-effect waves-light btn" align="center">Publicar Respuesta</a>
+            <a {{action 'guardarRes' model}} class="waves-effect waves-light btn" align="center">Publicar Respuesta</a>
             <button class="btn btn-primary" type="reset"> <b>Limpiar Formulario</b></button>
             <br>
             <br>
-            {{#Link-to 'lista-preguntas'}} Regresar al foro{{/Link-to}}
+            {{#Link-to 'lista-preguntas'}} Regresar a Preguntas Frecuentes{{/Link-to}}
         </div>
       </div>
     </form>

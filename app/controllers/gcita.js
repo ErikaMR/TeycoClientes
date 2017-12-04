@@ -25,7 +25,8 @@ export default Ember.Controller.extend({
 						uid: idCliente,
 						contacto: this.get('model.contacto'),
 					}).save();
-					swal('La cita de guardó correctamente')
+					swal('La cita de guardó correctamente');
+					this.transitionToRoute('iniciocliente')
 				});
 			});
 			}

@@ -7,28 +7,33 @@
       <div class="row">
          <h2 class="ui header" style="color:#424242">Introduce los siguientes datos para dar de alta un sistema de videovigilancia</h2>
         <div class="input-field col s12">
+            {{#power-select-multiple
+                  options=model.usuarios
+                  selected=model.sistema.usuarios
+                  placeholder="Selecciona el usuario"
+                  onchange=(action (mut model.sistema.usuarios))
+                  as |usuario|
+                }}
+                  {{usuario.nombre}}
+                {{/power-select-multiple}}
             <div class='input-field col s12'>
-                {{input class='validate' value=model.ncliente type='text' name='cliente'}}
-                <label for='email'><h3><i class="user circle"></i>Nombre del cliente:</h3></label>
-            </div>
-            <div class='input-field col s12'>
-                {{input class='validate' value=model.ubicacion type='text' name='ubicacion'}}
+                {{input class='validate' value=model.sistema.ubicacion type='text' name='ubicacion'}}
                 <label for='email'><h3><i class="user circle outline"></i>Ubicación/Referencia:</h3></label>
             </div>
             <div class='input-field col s12'>
-                {{input class='validate' value=model.mac type='text' name='mac'}}
+                {{input class='validate' value=model.sistema.mac type='text' name='mac'}}
                 <label for='email'><h3><i class="user circle outline"></i>Número de MAC:</h3></label>
             </div>
             <div class='input-field col s12'>
-                {{input class='validate' value=model.nusuario type='text' name='usuario'}}
+                {{input class='validate' value=model.sistema.nusuario type='text' name='usuario'}}
                 <label for='email'><h3><i class="user circle outline"></i>Nombre de usuario:</h3></label>
             </div>
             <div class='input-field col s12'>
-                {{input class='validate' value=model.cdvr type='text' name='con'}}
+                {{input class='validate' value=model.sistema.cdvr type='text' name='con'}}
                 <label for='email'><h3><i class="user circle outline"></i>Contraseña (opcional):</h3></label>
             </div>
             
-            <a {{action 'guardarsv'}} class="waves-effect waves-light btn" align="center">Guardar</a>
+            <a {{action 'guardarsv' model.sistema}} class="waves-effect waves-light btn" align="center">Guardar</a>
             <button class="btn btn-primary" type="reset"> <b>Limpiar Formulario</b></button>
             <br>
             <br>

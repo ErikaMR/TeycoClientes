@@ -1,9 +1,7 @@
 import Ember from 'ember';
+import sweetAlert from 'ember-sweetalert';
 
 export default Ember.Route.extend({
-	model(){
-		return this.store.findAll('pregunta');
-	},
 	beforeModel(){
 			return this.get('session').fetch().then(()=>{
 			let id  = this.get('session.currentUser.uid');
@@ -39,10 +37,17 @@ export default Ember.Route.extend({
 			})
 		})
 	},
+	model(){
+		return this.store.findAll('pregunta');
+	},
 	actions: {
 		borrarPreg(pregunta){
-			alert("Se eliminó la pregunta");
+			swal("Se eliminó la pregunta");
 			pregunta.destroyRecord();
+		},
+		borrarRes(respuesta){
+			swal("Se eliminó la respuesta");
+			respuesta.destroyRecord();
 		}
 	}
 });

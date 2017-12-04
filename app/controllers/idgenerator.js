@@ -12,7 +12,8 @@ export default Ember.Controller.extend({
 					pid: idnuevo,
 					nombre: nombreclient,
 					}).save();
-				swal('El registro se realizó correctamente')
+				swal('El registro se realizó correctamente');
+				this.transitionToRoute('inicio')	
 		}
 	}
 });

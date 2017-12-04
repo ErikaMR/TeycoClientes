@@ -2,9 +2,6 @@ import Ember from 'ember';
 import sweetAlert from 'ember-sweetalert';
 
 export default Ember.Route.extend({
-	model(){
-		return this.store.findAll('cita');
-	},
 	beforeModel(){
 			return this.get('session').fetch().then(()=>{
 			let id  = this.get('session.currentUser.uid');
@@ -39,6 +36,9 @@ export default Ember.Route.extend({
 					}
 			})
 		})
+	},
+	model(){
+		return this.store.findAll('cita');
 	},
 	actions: {
 		borrarCita(cita){

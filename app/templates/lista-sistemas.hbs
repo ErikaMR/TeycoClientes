@@ -7,15 +7,17 @@
   		<br>
 	    <br>
   		<ul class="collection with-header">
+  			<li class="collection-header" style="background:#efebe9"><h4><b>{{#each sistema.usuarios as |usuario|}}
+            <li>{{usuario.nombre}} {{usuario.apellido}}</li>
+         	 {{/each}}</b></h4></li>
   			{{#each model as |sistema|}}
-	        <li class="collection-header" style="background:#efebe9"><h4><b>{{sistema.ncliente}}</b></h4></li>
-	        <li class="collection-item">{{sistema.ubicacion}}</li>
-	        <li class="collection-item">{{sistema.mac}}</li>
-	        <li class="collection-item">{{sistema.nusuario}}
+	        <li class="collection-item"><b>Ubicación del sistema:</b> {{sistema.ubicacion}}</li>
+	        <li class="collection-item"><b>MAC del dispositivo: </b> {{sistema.mac}}</li>
+	        <li class="collection-item"><b>Nombre de usuario del sistema: </b> {{sistema.nusuario}}</li>
+	        <li class="collection-item"><b>Contraseña del sistema (Opcional): </b> {{sistema.cdvr}} </li>
 	        <br>
 	        <br>
 	        <button {{action 'borrarSistema' sistema}}> <b> Borrar Sistema </b></button>
-	        </li>
 	        {{/each}}
       </ul>
 

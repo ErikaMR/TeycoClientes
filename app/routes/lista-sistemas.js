@@ -1,9 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-	model(){
-		return this.store.findAll('sistema');
-	},
 	beforeModel(){
 			return this.get('session').fetch().then(()=>{
 			let id  = this.get('session.currentUser.uid');
@@ -39,9 +36,13 @@ export default Ember.Route.extend({
 			})
 		})
 	},
+	
+	model(){
+		return this.store.findAll('sistema');
+	},
 	actions: {
 		borrarSistema(sistema){
-			alert("Se eliminó el sistema");
+			swal('Se eliminó el sistema')
 			sistema.destroyRecord();
 		}
 	}

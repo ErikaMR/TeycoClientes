@@ -16,11 +16,12 @@ Router.map(function() {
   this.route('lista-sistemas');
   this.route('preguntas');
   this.route('lista-preguntas');
-  this.route('respuestas');
+  this.route('respuestas', {path:'/respuesta/:idpreg'});
   this.route('gcita');
   this.route('lista-citas');
   this.route('lista-preguntasadm');
   this.route('lista-citacliente');
+  this.route('lista-sistemaclientes');
 });
 
 export default Router;

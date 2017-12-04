@@ -1,0 +1,32 @@
+<center>
+  <p></p>
+  <div class="container" style="padding: 100px; background:#29b6f6">
+  <div class="z-depth-1 white lighten-4 row" style="display: inline-block; padding: 32px 55px 0px 55px; border: 2px solid #EEE;">
+  	  <div class="row">
+  		<h2 class="ui header" style="color:#424242">A continuación se muestran los datos relacionados a su sistema de videovigilancia: </h2>
+  		<br>
+	    <br>
+  		<ul class="collection with-header">
+  			{{#each model as |sistema|}}
+  		
+  			<ul>
+  			</ul>
+	        <li class="collection-header" style="background:#efebe9"><h4><b>{{#each sistema.usuarios as |usuario|}}
+            <li>{{usuario.nombre}} {{usuario.apellido}}</li>
+          {{/each}}</b></h4></li>
+	        <li class="collection-item"><b>Ubicación del sistema: </b> {{sistema.ubicacion}}</li>
+	        <li class="collection-item"><b>MAC del dispositivo: </b> {{sistema.mac}}</li>
+	        <li class="collection-item"><b>Nombre de usuario del sistema: </b> {{sistema.nusuario}}</li>
+          <li class="collection-item"><b>Contraseña del sistema (Opcional): </b> {{sistema.cdvr}}
+	        <br>
+	        <br>
+	        </li>
+	        {{/each}}
+      </ul>
+		<br>
+      	<br>
+      	{{#Link-to 'iniciocliente'}} Regresar al inicio{{/Link-to}}
+	  </div>
+</div>
+</div>
+</center>

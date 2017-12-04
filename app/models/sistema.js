@@ -2,7 +2,6 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
 	mac: DS.attr('string'),
-	ncliente: DS.attr('string'),
 	ubicacion: DS.attr('string'),
 	nusuario: DS.attr('string'),
 	contra: '',

@@ -10,8 +10,14 @@
   			{{#each model as |pregunta|}}
 	        <li class="collection-header" style="background:#efebe9"><h4><b>{{pregunta.preg}}</b></h4>
 	        	<li>Respuesta:
+	        	<ul>
+	        		{{#each pregunta.respuestas as |respuesta|}}
+	        		<li class="collection-header" style="background:#efebe9"><h4><b>{{respuesta.body}}</b></h4>
+	        		</li>
+	        		{{/each}}
+	        	</ul>
 	        	<p></p>
-	        	<button><b>{{#Link-to 'respuestas'}}Añadir respuesta{{/Link-to}}</b></button>
+	        	<button><b>{{#Link-to 'respuestas' pregunta.id}}Añadir respuesta{{/Link-to}}</b></button>
 	        	</li>
 	        </li>
 	        {{/each}}
